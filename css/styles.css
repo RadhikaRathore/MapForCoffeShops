@@ -1,0 +1,28 @@
+
+#map {
+  height: 100vh;
+}
+
+html, body {
+  margin: 10;
+  padding: 10;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#searchBox-cafeList{
+
+  background-color: #05113c; 
+}
+
+#foursquare-img {
+    height: 60px;
+    width: 60px;
+}
+
+@media screen and (min-width: 650px) {
+	main {
+		flex-direction: row;
+		position: relative;
+	}
+}

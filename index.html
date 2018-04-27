@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Neighborhood Map for Cafe in BTM Layout </title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS and Bootstrap links -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <main>          
+      <div class="container-fluid">
+        <div class="col-md-12">
+
+          <div class="row" >
+
+            <div class="col-sm-4" id="searchBox-cafeList">
+              <div class="search-area text-center form-group">
+                <input class="form-control" type="text" data-bind="textInput: searchedData, valueUpdate: 'afterkeydown'" placeholder="Search for cafe's near BTM Layout">
+              </div>
+              
+              <ul class="nav flex-column" data-bind="foreach: cafeBangalore">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#" data-bind="text: title, click: showInfo"></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-8" id="map"></div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container text-left">
+        <a href="https://developer.foursquare.com/" class="href" target="_blank">
+          <img id="foursquare-img" src="http://www.freeiconspng.com/uploads/foursquare-icon-22.png" alt="used with foursquare" >
+        </a>
+        <span class="footer-name">Radhika Rathore &copy; All Rights reserved</span>
+      </div>
+    </footer>
+     
+    <script type="text/javascript" src="js/mapStyle.js"></script>   
+    <script type="text/javascript" src="js/cafeData.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js'></script>    
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Google Maps call -->      
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0I_PS6ksodfgcbFevO2eEq5N_MqLR_2c&callback=initApp" async defer onerror="mapLoadError()"></script>
+  </body>
+</html>
